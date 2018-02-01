@@ -1,0 +1,24 @@
+[1mdiff --git a/app/src/main/res/anim/animacao_splash.xml b/app/src/main/res/anim/animacao_splash.xml[m
+[1mindex 42d597a..7a01e94 100644[m
+[1m--- a/app/src/main/res/anim/animacao_splash.xml[m
+[1m+++ b/app/src/main/res/anim/animacao_splash.xml[m
+[36m@@ -2,4 +2,4 @@[m
+ <alpha xmlns:android="http://schemas.android.com/apk/res/android"[m
+     android:fromAlpha="0.0"[m
+     android:toAlpha="1.0"[m
+[31m-    android:duration="3000" />[m
+\ No newline at end of file[m
+[32m+[m[32m    android:duration="2800" />[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/layout/fragment_sobre.xml b/app/src/main/res/layout/fragment_sobre.xml[m
+[1mindex b15d7f0..b61946e 100644[m
+[1m--- a/app/src/main/res/layout/fragment_sobre.xml[m
+[1m+++ b/app/src/main/res/layout/fragment_sobre.xml[m
+[36m@@ -8,6 +8,6 @@[m
+     <TextView[m
+         android:layout_width="match_parent"[m
+         android:layout_height="match_parent"[m
+[31m-        android:text="@string/hello_blank_fragment" />[m
+[32m+[m[32m        android:text="O objetivo do jogo é somar 21 pontos " />[m
+ [m
+ </FrameLayout>[m
