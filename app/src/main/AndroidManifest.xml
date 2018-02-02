@@ -21,7 +21,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" />
-        <activity android:name=".EstorouPontuacaoActivity"></activity>
+        <activity android:name=".EstorouPontuacaoActivity" />
+        <activity android:name=".Sucesso21Activity"></activity>
     </application>
 
 </manifest>

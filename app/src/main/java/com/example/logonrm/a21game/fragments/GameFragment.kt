@@ -12,6 +12,7 @@ import android.widget.TextView
 import com.example.logonrm.a21game.EstorouPontuacaoActivity
 
 import com.example.logonrm.a21game.R
+import com.example.logonrm.a21game.Sucesso21Activity
 import com.example.logonrm.a21game.dao.CartaDAO
 import com.example.logonrm.a21game.model.Carta
 import kotlinx.android.synthetic.main.fragment_game.*
@@ -63,6 +64,12 @@ class GameFragment : Fragment() {
 
         val pontuacaoAtualizada = tvPontuacao.text.toString().toInt() + cartaSelecionada.pontuacao
         tvPontuacao.text = pontuacaoAtualizada.toString()
+
+        if (pontuacaoAtualizada === 21) {
+            val intent = Intent(context, Sucesso21Activity::class.java)
+            startActivity(intent)
+        }
+
         if (pontuacaoAtualizada > 21) {
             val intent = Intent(context, EstorouPontuacaoActivity::class.java)
             intent.putExtra("PONTUACAO", tvPontuacao.text.toString())
