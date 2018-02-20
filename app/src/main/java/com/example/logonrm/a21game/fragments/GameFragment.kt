@@ -62,15 +62,12 @@ class GameFragment : Fragment() {
         val posicaoCartaSelecionada = gerador.nextInt(cartas.size)
         val cartaSelecionada = cartas.get(posicaoCartaSelecionada)
 
-        val pontuacaoAtualizada = tvPontuacao.text.toString().toInt() + cartaSelecionada.pontuacao
+        var pontuacaoAtualizada = tvPontuacao.text.toString().toInt() + cartaSelecionada.pontuacao
         tvPontuacao.text = pontuacaoAtualizada.toString()
-
         if (pontuacaoAtualizada === 21) {
             val intent = Intent(context, Sucesso21Activity::class.java)
             startActivity(intent)
-        }
-
-        if (pontuacaoAtualizada > 21) {
+        } else if (pontuacaoAtualizada > 21) {
             val intent = Intent(context, EstorouPontuacaoActivity::class.java)
             intent.putExtra("PONTUACAO", tvPontuacao.text.toString())
             startActivity(intent)
